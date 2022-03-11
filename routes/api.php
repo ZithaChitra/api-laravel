@@ -33,6 +33,3 @@ Route::prefix('v1')->group(function(){
     Route::delete('image/{image}', [ImageManipulationController::class, 'destroy']);
 });
 
-
-
-

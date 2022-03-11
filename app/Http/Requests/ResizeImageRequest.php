@@ -33,6 +33,11 @@ class ResizeImageRequest extends FormRequest
 
         $image = $this->post('image');
 
+        echo '<pre>';
+        var_dump($image);
+        echo '</pre>';
+        exit();
+
         if($image && $image instanceof UploadedFile){
             $rules['image'][] = 'image';
         }
@@ -41,10 +46,10 @@ class ResizeImageRequest extends FormRequest
         }
 
 
-        echo '<pre>';
-        var_dump($rules);
-        echo '</pre>';
-        exit();
+        // echo '<pre>';
+        // var_dump($rules);
+        // echo '</pre>';
+        // exit();
 
         return $rules;
     }
